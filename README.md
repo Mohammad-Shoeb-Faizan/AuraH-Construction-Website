@@ -2,7 +2,7 @@
 
 A high-performance, responsive construction website template built with a Modern Noir aesthetic. Designed for structural engineering firms and construction management professionals who prioritize technical precision and digital excellence.
 
-[View Live Demo](#) <!-- Placeholder for actual demo link -->
+[View Live Demo](https://aurah-construction-website.pages.dev/)
 
 ---
 
