@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8b5cf6;       /* Primary Violet */
+  --color-primary-light: #a786ff; 
+  --color-primary-dark: #7c3aed;  
+  
+  --color-accent: #8b5cf6;
+  --color-accent-light: #a786ff;
+  --color-accent-dark: #7c3aed;
+  
+  --color-heading: #f8fafc;       /* high contrast for dark mode */
+  --color-body: #94a3b8;          /* easy on the eyes */
+  --color-secondary: #475569;     
+  --color-secondary-light: #64748b;
+  --color-secondary-dark: #1e293b;
+
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-4xl: 2.5rem;
+  
+  --spacing-128: 32rem;
+  --spacing-144: 36rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body bg-[#020617] text-slate-400 antialiased leading-relaxed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-black text-slate-50 tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-dark text-white px-8 py-3 rounded-md font-semibold transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-md font-semibold transition-all duration-300 active:scale-95;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary-dark;
+  }
+}
